@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--<bean id = "Xiangyang" class = "org.example.Xiangyang" scope="prototype"></bean>-->
+    <bean id = "Xiangyang" class = "org.example.Xiangyang" autowire="byType">
+<!--&lt;!&ndash;        <property name="age" value="30"></property>&ndash;&gt;-->
+<!--        <constructor-arg type="int" value="30" />-->
+<!--        <constructor-arg type="org.example.Laptop" ref="lap1" />-->
+<!--        <constructor-arg index="0" value="30" />-->
+<!--        <constructor-arg index="1" ref="lap1" />-->
+<!--        <constructor-arg name="laptop" ref="lap1" />-->
+<!--        <constructor-arg name="age" value="30" />-->
+        <property name="age" value = "21"/>
+        <property name="com" ref = "com1" />
+
+    </bean>
+<!--    <bean id = "Xiangyang2" class = "org.example.Xiangyang"></bean>-->
+<!---->
+
+    <bean id = "com" class = "org.example.Laptop" primary="true"/>
+<!--    //lazy-init means the object will not be created by default only when use it then will be created-->
+    <bean id = "com1" class = "org.example.Desktop" lazy-init="true"/>
+
+
+</beans>
