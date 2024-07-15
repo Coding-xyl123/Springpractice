@@ -15,6 +15,7 @@ public class Xiangyang {
     public void setAge(int age) {
         this.age = age;
     }
+
     @Autowired
     @Qualifier("com2")
     private Computer com;
